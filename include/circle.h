@@ -1,17 +1,18 @@
 // Copyright 2024 Fedor Khodyrev
+#pragma once
 #include <cstdint>
 #include <cmath>
 
 class Circle {
-private:
+ private:
     double radius;
     double ference;
     double area;
     const double PI = 3.14159;
 
-public:
+ public:
     Circle();
-    Circle(double radius);
+    explicit Circle(double radius);
     void setRadius(double r);
     void setFerence(double f);
     void setArea(double a);
@@ -20,7 +21,7 @@ public:
     double getFerence();
     double getArea();
 
-private:
+ private:
     void calculateFerence();
     void calculateArea();
 };
